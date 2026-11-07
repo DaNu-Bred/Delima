@@ -1,2 +1,3 @@
-hi :)
-hi back bro
+colors:
+orange #f68e2d
+bg #2c2c2c

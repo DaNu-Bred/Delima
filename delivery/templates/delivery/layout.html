@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" integrity="sha384-Bk5cbLkZQ5raZ0+H2/+VbfYx3WpvxvQK4zqXZr7sYODuaX7bKXoSOnipQxkaS8sv" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'delivery/css/main.css'%}">
+<body>
+    <aside>
+        <img src="{% static "delivery/img/logo_full.png" %}" alt="logo", class="img-fluid">
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url "home" %}">
+                <li><i class="bi bi-house-door-fill"></i> Главная</li>
+            </a>
+            <a href="{% url "ch1" %}">
+                <li>Чето1</li>
+            </a>
+            <a href="{% url "ch2" %}">
+                <li>Чето2</li>
+            </a>
+        </ul>
+    </aside>
+    <main>
+        {% block body %}
+
+        {% endblock %}
+    </main>
+</body>
+</html>
